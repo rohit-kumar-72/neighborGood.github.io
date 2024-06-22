@@ -1,0 +1,257 @@
+:root {
+    --orange: #e27839;
+}
+
+.heading-name {
+    font-size: 40px;
+    font-weight: 700;
+    transform: translateY(25px);
+}
+
+.heading-second {
+    color: var(--orange);
+}
+
+.hero {
+    width: 100%;
+    margin: 30px 0;
+    color: white;
+}
+
+.hero a {
+    color: white;
+}
+
+.hero .box {
+    position: relative;
+    padding: 30px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: minmax(autofit, repeat(8, 1fr));
+    grid-template-rows: repeat(8, 6.6vh);
+    gap: 10px;
+}
+
+.hero .box:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 9;
+}
+
+.hero .box:nth-child(2) {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.hero .box:nth-child(3) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+
+.hero .box:nth-child(4) {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+
+.hero .text {
+    position: absolute;
+    bottom: 30px;
+}
+
+.hero .box:nth-child(1) {
+    font-size: 28px;
+}
+
+@media screen and (max-width:768px) {
+    .hero .container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(18, 6vh);
+        gap: 10px;
+    }
+
+    .hero .box:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+
+    .hero .box:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 5;
+        grid-row-end: 10;
+    }
+
+    .hero .box:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 10;
+        grid-row-end: 15;
+    }
+
+    .hero .box:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 15;
+        grid-row-end: 20;
+    }
+}
+
+
+@media (max-width:700px) {
+    .heading-name {
+        transform: translateY(-30px);
+    }
+}
+
+.discover {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.discover .discoverContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 30px;
+}
+
+.discover .discoverBox {
+    width: 180px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 4%), 0 0 2px rgb(0 0 0 / 6%), 0 0 1px rgb(0 0 0 / 4%);
+}
+
+.discover .discoverImg {
+    /* padding: 10px; */
+    width: 180px;
+    height: 100px;
+}
+
+.discover img {
+    width: 180px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.discover h2 {
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+@media screen and (max-width: 425px) {
+    .discover .discoverContent {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        gap: 10px;
+    }
+
+    .discover .discoverBox {
+        width: 100%;
+    }
+
+    .discover .discoverImg {
+        /* padding: 10px; */
+        width: 100%;
+    }
+
+    .discover img {
+        width: 100%;
+    }
+}
+
+.fullMain {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fullLeft {
+    width: 75%;
+    /* background-color: red; */
+    /* min-height: 100vh; */
+}
+
+.fullRight {
+    width: 23%;
+}
+
+.leftHeading h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.leftUtility {
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    font-size: 16px;
+}
+
+.leftImage {
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+.leftImage img {
+    width: 100%;
+}
+
+.leftContent {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.leftVisit {
+    width: 100%;
+    text-align: center;
+}
+
+.leftVisit a {
+    margin: 0 auto;
+    all: unset;
+    cursor: pointer;
+    color: white;
+    padding: 5px 10px;
+    background-color: #f45c0b;
+}
+
+@media screen and (max-width:768px) {
+    .fullMain {
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+
+    .fullLeft {
+        width: 100%;
+        /* background-color: red; */
+        /* min-height: 100vh; */
+    }
+
+    .fullRight {
+        width: 100%;
+    }
+}
